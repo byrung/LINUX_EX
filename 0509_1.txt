@@ -1,0 +1,39 @@
+root@studentkiheon-virtual-machine:~/바탕화면# touch mydata.text
+root@studentkiheon-virtual-machine:~/바탕화면# touch mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# las -l mydata.txt
+명령어 'las' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb alsatool의 명령어 ' (0.39.0-11)'
+  deb lastutil-linux의 명령어 ' (2.37.2-4ubuntu3)'
+  deb lvslvm2의 명령어 ' (2.03.11-2.1ubuntu4)'
+  deb lesatm-tools의 명령어 ' (1:2.5.1-4build2)'
+  deb casamule-utils의 명령어 ' (1:2.3.3-2)'
+  deb kaskas의 명령어 ' (2.6.3-2)'
+  deb lscoreutils의 명령어 ' (8.32-4.1ubuntu1)'
+  deb lrslrslib의 명령어 ' (0.71a-1)'
+  deb lapsepix의 명령어 ' (1.2.21-2)'
+  deb asbinutils의 명령어 ' (2.38-4ubuntu2.1)'
+Try: apt install <deb name>
+root@studentkiheon-virtual-machine:~/바탕화면# la -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# chmod 777 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# chmod 644 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# chmod 777 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rwxrwxrwx 1 root root 0  5월  9 09:25 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# chmod 644 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rw-r--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# chmod u+x mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rwxr--r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# chmod g+w mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rwxrw-r-- 1 root root 0  5월  9 09:25 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# chomod o+x mydata.txt
+명령어 'chomod' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb chmodcoreutils의 명령어 ' (8.32-4.1ubuntu1)'
+Try: apt install <deb name>
+root@studentkiheon-virtual-machine:~/바탕화면# chmod o+x mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# ls -l mydata.txt
+-rwxrw-r-x 1 root root 0  5월  9 09:25 mydata.txt
+root@studentkiheon-virtual-machine:~/바탕화면# 
