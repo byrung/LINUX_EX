@@ -1,0 +1,15 @@
+root@studentkiheon-virtual-machine:~/바탕화면# yes > /dev/null
+^Z
+[1]+  멈춤                  yes > /dev/null
+root@studentkiheon-virtual-machine:~/바탕화면# bg
+[1]+ yes > /dev/null &
+root@studentkiheon-virtual-machine:~/바탕화면# fg 1
+yes > /dev/null
+^C
+root@studentkiheon-virtual-machine:~/바탕화면# cd ..
+root@studentkiheon-virtual-machine:~# cd..
+cd..: 명령을 찾을 수 없습니다
+root@studentkiheon-virtual-machine:~# nano &
+[1] 2569
+root@studentkiheon-virtual-machine:~# fg 1
+nano
