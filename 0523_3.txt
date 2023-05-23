@@ -1,0 +1,16 @@
+nono /etc/default/grub
+GRUB_TIMEOUT_STYLE=countdown
+GRUB_TIMEOUT=20
+GRUB_DISTRIBUTOR=`Artificial Intelligence` // `` 아니면 ""으로
+
+
+nano /etc/grub.d/00_header
+
+헤더파일 맨 아래에 추가
+cat << E0F
+set superusers="grubuser"
+password grubuser 1234
+E0F
+컨트롤 + x로 저장고 나온 후
+update grub
+reboot
