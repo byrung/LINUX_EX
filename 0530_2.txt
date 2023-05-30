@@ -1,0 +1,270 @@
+root@studentkiheon-virtual-machine:~/바탕화면# cd ..
+root@studentkiheon-virtual-machine:~# apt-get -y install openssh-server
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+몇몇 패키지를 설치할 수 없습니다. 요청한 상황이 불가능할 수도 있고,
+불안정 배포판을 사용해서 일부 필요한 패키지를 아직 만들지 않았거나,
+아직 Incoming에서 나오지 않은 경우일 수도 있습니다.
+이 상황을 해결하는데 다음 정보가 도움이 될 수도 있습니다:
+
+다음 패키지의 의존성이 맞지 않습니다:
+ apt : 의존: gpgv 혹은
+               gpgv2 하지만 %s 패키지를 설치하지 않을 것입니다 혹은
+               gpgv1
+       의존: libapt-pkg6.0 (>= 2.4.8) 하지만 %s 패키지를 설치하지 않을 것입니다
+ dpkg : 미리의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+ libbsd0:i386 : 의존: libc6:i386 (>= 2.25) 하지만 설치할 수 없습니다
+ libc6 : 망가뜨림: openssh-server (< 1:8.2p1-4)
+         망가뜨림: openssh-server:i386 (< 1:8.2p1-4)
+         추천: libnss-nis 하지만 설치할 수 없습니다
+         추천: libnss-nisplus 하지만 설치할 수 없습니다
+ libedit2:i386 : 의존: libc6:i386 (>= 2.17) 하지만 설치할 수 없습니다
+ libssl1.0.0:i386 : 의존: libc6:i386 (>= 2.7) 하지만 설치할 수 없습니다
+ libtinfo5:i386 : 의존: libc6:i386 (>= 2.16) 하지만 설치할 수 없습니다
+ openssh-client:i386 : 의존: libc6:i386 (>= 2.26) 하지만 설치할 수 없습니다
+                       의존: libgssapi-krb5-2:i386 (>= 1.14+dfsg) 하지만 설치할 수 없습니다
+                       의존: libselinux1:i386 (>= 1.32) 하지만 설치할 수 없습니다
+                       추천: xauth:i386
+ openssh-server : 의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+                  추천: xauth
+                  추천: ssh-import-id 하지만 %s 패키지를 설치하지 않을 것입니다
+ shim-signed : 의존: grub-efi-amd64-signed (>= 1.187.2~) 하지만 %s 패키지를 설치하지 않을 것입니다 혹은
+                       grub-efi-arm64-signed (>= 1.187.2~) 하지만 설치할 수 없습니다
+               의존: grub2-common (>= 2.04-1ubuntu24)
+ util-linux : 미리의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+ zlib1g:i386 : 의존: libc6:i386 (>= 2.4) 하지만 설치할 수 없습니다
+E: 오류, pkgProblemResolver::Resolve가 망가졌습니다. 고정 패키지때문에 발생할 수도 있습니다.
+root@studentkiheon-virtual-machine:~# echo $LANG
+ko_KR.UTF-8
+root@studentkiheon-virtual-machine:~# LANG=en_US.UTF-8
+root@studentkiheon-virtual-machine:~# apt-get -y install openssh-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ apt : Depends: gpgv or
+                gpgv2 but it is not going to be installed or
+                gpgv1
+       Depends: libapt-pkg6.0 (>= 2.4.8) but it is not going to be installed
+ dpkg : PreDepends: zlib1g (>= 1:1.1.4) but it is not installable
+ libbsd0:i386 : Depends: libc6:i386 (>= 2.25) but it is not installable
+ libc6 : Breaks: openssh-server (< 1:8.2p1-4)
+         Breaks: openssh-server:i386 (< 1:8.2p1-4)
+         Recommends: libnss-nis but it is not installable
+         Recommends: libnss-nisplus but it is not installable
+ libedit2:i386 : Depends: libc6:i386 (>= 2.17) but it is not installable
+ libssl1.0.0:i386 : Depends: libc6:i386 (>= 2.7) but it is not installable
+ libtinfo5:i386 : Depends: libc6:i386 (>= 2.16) but it is not installable
+ openssh-client:i386 : Depends: libc6:i386 (>= 2.26) but it is not installable
+                       Depends: libgssapi-krb5-2:i386 (>= 1.14+dfsg) but it is not installable
+                       Depends: libselinux1:i386 (>= 1.32) but it is not installable
+                       Recommends: xauth:i386
+ openssh-server : Depends: zlib1g (>= 1:1.1.4) but it is not installable
+                  Recommends: xauth
+                  Recommends: ssh-import-id but it is not going to be installed
+ shim-signed : Depends: grub-efi-amd64-signed (>= 1.187.2~) but it is not going to be installed or
+                        grub-efi-arm64-signed (>= 1.187.2~) but it is not installable
+               Depends: grub2-common (>= 2.04-1ubuntu24)
+ util-linux : PreDepends: zlib1g (>= 1:1.1.4) but it is not installable
+ zlib1g:i386 : Depends: libc6:i386 (>= 2.4) but it is not installable
+E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.
+root@studentkiheon-virtual-machine:~# sudo apt-get -f install
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+0개 업그레이드, 0개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+root@studentkiheon-virtual-machine:~# apt-get -y install openssh-server
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ apt : Depends: gpgv or
+                gpgv2 but it is not going to be installed or
+                gpgv1
+       Depends: libapt-pkg6.0 (>= 2.4.8) but it is not going to be installed
+ dpkg : PreDepends: zlib1g (>= 1:1.1.4) but it is not installable
+ libbsd0:i386 : Depends: libc6:i386 (>= 2.25) but it is not installable
+ libc6 : Breaks: openssh-server (< 1:8.2p1-4)
+         Breaks: openssh-server:i386 (< 1:8.2p1-4)
+         Recommends: libnss-nis but it is not installable
+         Recommends: libnss-nisplus but it is not installable
+ libedit2:i386 : Depends: libc6:i386 (>= 2.17) but it is not installable
+ libssl1.0.0:i386 : Depends: libc6:i386 (>= 2.7) but it is not installable
+ libtinfo5:i386 : Depends: libc6:i386 (>= 2.16) but it is not installable
+ openssh-client:i386 : Depends: libc6:i386 (>= 2.26) but it is not installable
+                       Depends: libgssapi-krb5-2:i386 (>= 1.14+dfsg) but it is not installable
+                       Depends: libselinux1:i386 (>= 1.32) but it is not installable
+                       Recommends: xauth:i386
+ openssh-server : Depends: zlib1g (>= 1:1.1.4) but it is not installable
+                  Recommends: xauth
+                  Recommends: ssh-import-id but it is not going to be installed
+ shim-signed : Depends: grub-efi-amd64-signed (>= 1.187.2~) but it is not going to be installed or
+                        grub-efi-arm64-signed (>= 1.187.2~) but it is not installable
+               Depends: grub2-common (>= 2.04-1ubuntu24)
+ util-linux : PreDepends: zlib1g (>= 1:1.1.4) but it is not installable
+ zlib1g:i386 : Depends: libc6:i386 (>= 2.4) but it is not installable
+E: Error, pkgProblemResolver::Resolve generated breaks, this may be caused by held packages.
+root@studentkiheon-virtual-machine:~# LANG=ko_KR.UTF-8
+root@studentkiheon-virtual-machine:~# apt-get -y install openssh-server
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+몇몇 패키지를 설치할 수 없습니다. 요청한 상황이 불가능할 수도 있고,
+불안정 배포판을 사용해서 일부 필요한 패키지를 아직 만들지 않았거나,
+아직 Incoming에서 나오지 않은 경우일 수도 있습니다.
+이 상황을 해결하는데 다음 정보가 도움이 될 수도 있습니다:
+
+다음 패키지의 의존성이 맞지 않습니다:
+ apt : 의존: gpgv 혹은
+               gpgv2 하지만 %s 패키지를 설치하지 않을 것입니다 혹은
+               gpgv1
+       의존: libapt-pkg6.0 (>= 2.4.8) 하지만 %s 패키지를 설치하지 않을 것입니다
+ dpkg : 미리의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+ libbsd0:i386 : 의존: libc6:i386 (>= 2.25) 하지만 설치할 수 없습니다
+ libc6 : 망가뜨림: openssh-server (< 1:8.2p1-4)
+         망가뜨림: openssh-server:i386 (< 1:8.2p1-4)
+         추천: libnss-nis 하지만 설치할 수 없습니다
+         추천: libnss-nisplus 하지만 설치할 수 없습니다
+ libedit2:i386 : 의존: libc6:i386 (>= 2.17) 하지만 설치할 수 없습니다
+ libssl1.0.0:i386 : 의존: libc6:i386 (>= 2.7) 하지만 설치할 수 없습니다
+ libtinfo5:i386 : 의존: libc6:i386 (>= 2.16) 하지만 설치할 수 없습니다
+ openssh-client:i386 : 의존: libc6:i386 (>= 2.26) 하지만 설치할 수 없습니다
+                       의존: libgssapi-krb5-2:i386 (>= 1.14+dfsg) 하지만 설치할 수 없습니다
+                       의존: libselinux1:i386 (>= 1.32) 하지만 설치할 수 없습니다
+                       추천: xauth:i386
+ openssh-server : 의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+                  추천: xauth
+                  추천: ssh-import-id 하지만 %s 패키지를 설치하지 않을 것입니다
+ shim-signed : 의존: grub-efi-amd64-signed (>= 1.187.2~) 하지만 %s 패키지를 설치하지 않을 것입니다 혹은
+                       grub-efi-arm64-signed (>= 1.187.2~) 하지만 설치할 수 없습니다
+               의존: grub2-common (>= 2.04-1ubuntu24)
+ util-linux : 미리의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+ zlib1g:i386 : 의존: libc6:i386 (>= 2.4) 하지만 설치할 수 없습니다
+E: 오류, pkgProblemResolver::Resolve가 망가졌습니다. 고정 패키지때문에 발생할 수도 있습니다.
+root@studentkiheon-virtual-machine:~# sudo apt-get update
+기존:1 http://mirror.kakao.com/ubuntu bionic InRelease 
+기존:2 https://dl.google.com/linux/chrome/deb stable InRelease                              
+기존:3 http://kr.archive.ubuntu.com/ubuntu bionic-updates InRelease                         
+패키지 목록을 읽는 중입니다... 완료                                    
+W: http://ftp.daumkakao.com/ubuntu/dists/bionic/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+W: http://kr.archive.ubuntu.com/ubuntu/dists/bionic-updates/InRelease: Key is stored in legacy trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in apt-key(8) for details.
+root@studentkiheon-virtual-machine:~# sudo apt-get install libc6
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+패키지 libc6는 이미 최신 버전입니다 (2.35-0ubuntu3.1).
+libc6 패키지는 수동설치로 지정합니다.
+0개 업그레이드, 0개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+root@studentkiheon-virtual-machine:~# sudo apt-get --fix-broken install
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+0개 업그레이드, 0개 새로 설치, 0개 제거 및 10개 업그레이드 안 함.
+root@studentkiheon-virtual-machine:~# apt-get -y install openssh-server
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+몇몇 패키지를 설치할 수 없습니다. 요청한 상황이 불가능할 수도 있고,
+불안정 배포판을 사용해서 일부 필요한 패키지를 아직 만들지 않았거나,
+아직 Incoming에서 나오지 않은 경우일 수도 있습니다.
+이 상황을 해결하는데 다음 정보가 도움이 될 수도 있습니다:
+
+다음 패키지의 의존성이 맞지 않습니다:
+ apt : 의존: gpgv 혹은
+               gpgv2 하지만 %s 패키지를 설치하지 않을 것입니다 혹은
+               gpgv1
+       의존: libapt-pkg6.0 (>= 2.4.8) 하지만 %s 패키지를 설치하지 않을 것입니다
+ dpkg : 미리의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+ libbsd0:i386 : 의존: libc6:i386 (>= 2.25) 하지만 설치할 수 없습니다
+ libc6 : 망가뜨림: openssh-server (< 1:8.2p1-4)
+         망가뜨림: openssh-server:i386 (< 1:8.2p1-4)
+         추천: libnss-nis 하지만 설치할 수 없습니다
+         추천: libnss-nisplus 하지만 설치할 수 없습니다
+ libedit2:i386 : 의존: libc6:i386 (>= 2.17) 하지만 설치할 수 없습니다
+ libssl1.0.0:i386 : 의존: libc6:i386 (>= 2.7) 하지만 설치할 수 없습니다
+ libtinfo5:i386 : 의존: libc6:i386 (>= 2.16) 하지만 설치할 수 없습니다
+ openssh-client:i386 : 의존: libc6:i386 (>= 2.26) 하지만 설치할 수 없습니다
+                       의존: libgssapi-krb5-2:i386 (>= 1.14+dfsg) 하지만 설치할 수 없습니다
+                       의존: libselinux1:i386 (>= 1.32) 하지만 설치할 수 없습니다
+                       추천: xauth:i386
+ openssh-server : 의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+                  추천: xauth
+                  추천: ssh-import-id 하지만 %s 패키지를 설치하지 않을 것입니다
+ shim-signed : 의존: grub-efi-amd64-signed (>= 1.187.2~) 하지만 %s 패키지를 설치하지 않을 것입니다 혹은
+                       grub-efi-arm64-signed (>= 1.187.2~) 하지만 설치할 수 없습니다
+               의존: grub2-common (>= 2.04-1ubuntu24)
+ util-linux : 미리의존: zlib1g (>= 1:1.1.4) 하지만 설치할 수 없습니다
+ zlib1g:i386 : 의존: libc6:i386 (>= 2.4) 하지만 설치할 수 없습니다
+E: 오류, pkgProblemResolver::Resolve가 망가졌습니다. 고정 패키지때문에 발생할 수도 있습니다.
+root@studentkiheon-virtual-machine:~# ssh
+usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
+           [-b bind_address] [-c cipher_spec] [-D [bind_address:]port]
+           [-E log_file] [-e escape_char] [-F configfile] [-I pkcs11]
+           [-i identity_file] [-J [user@]host[:port]] [-L address]
+           [-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+           [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] destination [command [argument ...]]
+root@studentkiheon-virtual-machine:~# ssh ubuntu@192.168.75.129
+The authenticity of host '192.168.75.129 (192.168.75.129)' can't be established.
+ED25519 key fingerprint is SHA256:EZFjcXFFGOa9EsByOVeIfAhZ0WqiYCgBX0/3/jm79sI.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: y
+Please type 'yes', 'no' or the fingerprint: y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added '192.168.75.129' (ED25519) to the list of known hosts.
+ubuntu@192.168.75.129's password: 
+Permission denied, please try again.
+ubuntu@192.168.75.129's password: 
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-67-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue May 30 02:44:26 AM UTC 2023
+
+  System load:  0.080078125       Processes:              217
+  Usage of /:   29.9% of 9.75GB   Users logged in:        1
+  Memory usage: 11%               IPv4 address for ens32: 192.168.75.129
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+22 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+Last login: Tue Mar 28 01:03:47 2023
+ubuntu@serverb:~$ ls
+ubuntu@serverb:~$ 

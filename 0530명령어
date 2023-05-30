@@ -1,0 +1,21 @@
+dpkg -l telnetd = telnetd 설치 확인
+apt-get install xinetd telnetd 관련 패키지 설치
+설치파일편집
+service telnet
+{
+    disable = no
+    flags =REUSE
+    socket_type = stream
+    wait=no
+    user = root
+    server = /usr/sbin/in.telnetd
+    log_on_failure += USERID
+}
+
+adduser teluser  = teluser유저생성
+systemctl restart xinetd = 텔넷 가동 여부 메세지 출력으로 확인 메세지가 출력되지않으면 정상가동
+systemctl enable xinetd = 재시작해도 텔넷 서비스 가동
+systemctl status xinetd = 가동 여부 확인 q로 탈출
+Active: active (running) 이렇게되면 정상작동
+
+
